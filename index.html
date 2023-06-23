@@ -19,7 +19,7 @@
     <img src="assets/img/logo.png" alt="Global">
     <p>Timmy</p>
   </a>
-  <p class="device-notification--message">basic voice command would be present on mobile view. Get the whole features on a larger screen. Try it honestly, you won't be disappointed.</p>
+  <p class="device-notification--message">basic voice command like Dowload his Resume and Open Githun would be present on mobile view. Get the whole features on a larger screen. Try it honestly, you won't be disappointed.</p>
 </div>
 
 <div class="perspective effect-rotate-left">
@@ -286,18 +286,40 @@
        }
  
        if (commandData.command === "downloadResume") {
-           const saveFile = () => {
-             saveAs(Resume)
+           const saveFile = (url, fileName) => {
+             const link = document.createElement('a')
+             link.href = url;
+             link.download = fileName;
+             link.target = '_blank';
+             document.body.appendChild(link)
+             link.click();
+             document.body.removeChild(link)
            }
  
-           saveFile()
+           const pdfUrl = 'file:///assets/MyResume.pdf'
+           const pdfFileName = 'Timmy Resume'
+           saveFile(pdfUrl,pdfFileName)
        }
  
-       if (commandData.command === "connections1") {
+       if (commandData.command === "whatsapp") {
            const whatsapp = 'https://wa.me/2349076042815'
            window.open(whatsapp)
        }
- 
+
+       if (commandData.command === "twitter") {
+           const Tweeter = 'https://twitter.com/timithedev'
+           window.open(Tweeter)
+       }
+
+       if (commandData.command === "discord") {
+           const Discord = 'https://discord.com/channels/@me'
+           window.open(Discord)
+       }
+
+       if (commandData.command === "github") {
+           const Github = 'https://github.com/t858'
+           window.open(Github)
+       }
      },
      rootEl: document.getElementById("alan-btn"),
    });

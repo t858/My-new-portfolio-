@@ -1,3 +1,3 @@
 const clicker =()=>{
-    alert("Tap the Mic button and use voice commands like 'Open About, Contact, Works, Skills, Home', 'Download his Resume', 'Show me his projects' ")
+    alert("Tap the Mic button and use voice commands like 'Download his Resume', 'Show me his projects'. Navigate using the vertical navbar on your left ")
 }

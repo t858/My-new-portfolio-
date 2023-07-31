@@ -286,19 +286,7 @@
        }
  
        if (commandData.command === "downloadResume") {
-           const saveFile = (url, fileName) => {
-             const link = document.createElement('a')
-             link.href = url;
-             link.download = fileName;
-             link.target = '_blank';
-             document.body.appendChild(link)
-             link.click();
-             document.body.removeChild(link)
-           }
- 
-           const pdfUrl = 'file:///assets/MyResume.pdf'
-           const pdfFileName = 'Timmy Resume'
-           saveFile(pdfUrl,pdfFileName)
+         const resume = 'https://drive.google.com/file/d/17uUIJeH1yp6hxMXhsaUXnRHFeTwnLTkc/view?usp=sharing'
        }
  
        if (commandData.command === "whatsapp") {
